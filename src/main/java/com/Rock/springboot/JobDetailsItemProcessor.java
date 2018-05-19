@@ -10,6 +10,7 @@ public class JobDetailsItemProcessor implements ItemProcessor<JobDetails, JobDet
 
 	public JobDetails process(JobDetails result) throws Exception {
 		
+		
 		System.out.println("Processing result :"+result);
 		
 		return result;

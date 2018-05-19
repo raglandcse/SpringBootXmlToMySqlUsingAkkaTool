@@ -14,6 +14,7 @@ public class JobDetails {
 	private String referencenumber;
 	private String url;
 	private String company;
+	
 	private String city;
 	private String state;
 	private String zip;
