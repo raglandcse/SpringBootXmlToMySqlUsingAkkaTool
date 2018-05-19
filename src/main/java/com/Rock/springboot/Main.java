@@ -17,7 +17,7 @@ public class Main {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-batch-context.xml");
 		
 		JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-		Job job = (Job) context.getBean("examResultJob");
+		Job job = (Job) context.getBean("ResultJob");
 	 
 		try {
 			JobExecution execution = jobLauncher.run(job, new JobParameters());

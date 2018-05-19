@@ -18,7 +18,7 @@
 	<!-- ItemReader which reads data from XML file -->
 	<bean id="xmlItemReader" class="org.springframework.batch.item.xml.StaxEventItemReader">
 
-		<property name="resource" value="classpath:examResult.xml" />
+		<property name="resource" value="classpath:JobDetails.xml" />
 
 		<property name="fragmentRootElementName" value="job" />
 
@@ -61,7 +61,7 @@
 	<bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
 
 	<!-- Actual Job -->
-	<batch:job id="examResultJob">
+	<batch:job id="ResultJob">
 		<batch:step id="step1">
 			<batch:tasklet transaction-manager="transactionManager">
 				<batch:chunk reader="xmlItemReader" writer="databaseItemWriter"
